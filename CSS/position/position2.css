@@ -1,0 +1,15 @@
+.box {
+    background: darkblue;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    padding-top: 25px;
+    padding-left: 25px;
+
+;
+
+}
+.div {
+    border: 1px solid black;
+}

@@ -1,0 +1,48 @@
+.div {
+    background-color: red;
+width: 200px;
+    height: 50px;
+    color: black;
+
+}
+
+#divb {
+    background: orange;
+}
+#divc {
+    background: lightgreen;
+}
+#divd {
+    background: lightskyblue;
+}
+#divaa {
+    width: 200px;
+    height: 90px;
+    background: darkred;
+    color: white;
+    margin-bottom: 20px;
+
+
+}
+#divbb {
+    width: 200px;
+    height: 90px;
+    background: saddlebrown;
+    color: white;
+    margin-bottom: 20px;
+}
+#divcc {
+    width: 200px;
+    height: 90px;
+    background: darkgreen;
+    color: white;
+    margin-bottom: 20px;
+}
+#divdd {
+    width: 200px;
+    height: 90px;
+    background: darkcyan;
+    color: white;
+    margin-bottom: 20px;
+
+}

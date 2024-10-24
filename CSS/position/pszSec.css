@@ -1,0 +1,17 @@
+body {
+    position: fixed;
+    height: 2000px;
+    padding-top:80px ;
+}
+.divan {
+    background: dodgerblue;
+    height: 700px;
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    left: 25%;
+}
+ #diva {
+color: white;
+ }

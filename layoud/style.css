@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Высота на весь экран */
+
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #87509c;
+    color: #ffffff;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.main {
+    background-color: #17c2a4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    flex-grow: 1; /* Растянем данный блок */
+    justify-content: center;
+}
+.main h1 {
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+.main button {
+    width: 200px;
+    height: 50px;
+    background: #87509c;
+    color: #ffffff;
+    border: none; /* Без рамки */
+    cursor: pointer /* Палец при наведении*/
+}
+.main button:hover {
+    background-color: #344b8e;
+}
+.logo {
+    color: #ffffff;
+    font-size:24px;
+    text-decoration: none; /* Без нижнего подчёркимвания */
+}
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none; /* Убрать точки из списка */
+
+}
+.navigation li {
+    margin-right: 40px;
+}
+.footer {
+    background-color: #344b8e;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Сверху и снизу - 0, слева и справа - auto*/
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Растянуть на всю страницу */
+}

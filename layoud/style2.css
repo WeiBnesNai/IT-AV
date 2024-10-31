@@ -1,0 +1,41 @@
+.body {
+    margin: 0;
+    display: flex;
+}
+.header {
+    background-color: orange;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+
+}
+.main {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+}
+.navigation ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation li {
+    padding-left: 40px;
+}
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+.text {
+    max-width: 400px;
+    flex-direction: column;
+
+
+
+}

@@ -1,0 +1,40 @@
+.blocks {
+    display: flex;
+    margin: 50px;
+}
+.texts {
+    display: flex;
+}
+.text1 {
+
+}
+.text2 {
+
+}
+.text3 {
+
+}
+.block {
+
+    width: 33%;
+    height: 450px;
+
+}
+
+.obl4 {
+    display: flex;
+    width: 99%;
+    border: 1px gray solid;
+    height: 100px;
+    background-color: rgb(0, 0, 0, 18%);
+
+}
+#obl3 {
+    background-color: rgb(0, 0, 255, 25%);
+}
+#obl1 {
+    background-color: rgb(255, 0, 0, 25% );
+}
+#obl2 {
+    background-color: rgb(0, 200, 0, 25%);
+}

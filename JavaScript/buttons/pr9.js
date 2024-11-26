@@ -13,23 +13,22 @@ b3.addEventListener('click', changetext3)
 let del = document.getElementById("del")
 del.addEventListener('click', deleteText)
 
-
 function changetext1() {
-        span1.innerText += inputt1.value
+    obl3.innerText += inputt1.value
 }
-
 function changetext2() {
-    span2.innerText += input2.value
+    obl1.innerText += input2.value
+}
+function changetext3() {
+    obl2.innerText += input3.value
 }
 
-function changetext3() {
-    span3.innerText += input3.value
-}
 function deleteText() {
-    span1.innerText = ''
+    obl3.innerText = ''
     inputt1.value = ''
-    span2.innerText = ''
+    obl1.innerText = ''
     input2.value = ''
-    span3.innerText = ''
+    obl2.innerText = ''
     input3.value = ''
 }
+

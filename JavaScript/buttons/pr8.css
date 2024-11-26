@@ -1,12 +1,9 @@
-.delete {
+.span {
+    border-bottom: 1px solid gray;
+    min-width: 50px;
     display: inline-block;
 }
 .input1 {
-    display: inline-block;
-}
-.input2 {
-    display: inline-block;
-}
-.input3 {
-    display: inline-block;
+
+
 }

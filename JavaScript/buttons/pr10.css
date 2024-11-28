@@ -1,9 +1,11 @@
 .blocks {
     display: flex;
-    margin: 50px;
+    margin-bottom: 50px;
+
 }
 .texts {
     display: flex;
+
 }
 .text1 {
 
@@ -12,15 +14,14 @@
 
 }
 .text3 {
-
 }
 .block {
-
-    width: 33%;
+    width: 33.3%;
     height: 450px;
-
 }
-
+.block div {
+    height: 100%;
+}
 .obl4 {
     display: flex;
     width: 99%;
@@ -37,4 +38,7 @@
 }
 #obl2 {
     background-color: rgb(0, 200, 0, 25%);
+}
+.b4 {
+    width: 250px;
 }

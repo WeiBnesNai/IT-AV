@@ -1,0 +1,206 @@
+.cont1 {
+    display: flex;
+    background-color: darkgrey;
+    height: 781px;
+    width: 600px;
+    position: relative;
+    justify-self: center;
+    flex-direction: column;
+}
+#pole {
+    top: 20px;
+    background-color: grey;
+    width: 500px;
+    height: 100px;
+    position: relative;
+    left: 50px;
+    font-size: 90px;
+    text-wrap: wrap;
+    color: whitesmoke;
+
+}
+#seven {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    align-self: center;
+    top: 50px;
+    right: 200px;
+    text-align: center;
+    font-size: 50px;
+}
+#eight {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    align-self: center;
+    bottom: 50px;
+    right: 65px;
+    text-align: center;
+    font-size: 50px;
+}
+#nine {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    align-self: center;
+    bottom: 150px;
+    right: -70px;
+    font-size: 50px;
+}
+#plus {
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    align-self: center;
+    bottom: 250px;
+    right: -205px;
+    font-size: 50px;
+}
+#four {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 275px;
+    right: 450px;
+    font-size: 50px;
+}
+#five {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 275px;
+    right: 315px;
+    font-size: 50px;
+}
+#six {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 275px;
+    right: 180px;
+    font-size: 50px;
+}
+#minus {
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 275px;
+    right: 45px;
+    font-size: 50px;
+}
+#one {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 400px;
+    right: 450px;
+    font-size: 50px;
+}
+#two {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 400px;
+    right: 315px;
+    font-size: 50px;
+}
+#three {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 400px;
+    right: 180px;
+    font-size: 50px;
+}
+#ym {
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 400px;
+    right: 45px;
+    font-size: 50px;
+}
+#Zero {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 525px;
+    right: 450px;
+    font-size: 50px;
+}
+#tochka {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 525px;
+    right: 315px;
+    font-size: 50px;
+}
+#ZZero {
+    background-color: whitesmoke;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 525px;
+    right: 180px;
+    font-size: 50px;
+}
+#slash {
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 525px;
+    right: 45px;
+    font-size: 50px;
+}
+#clear {
+    background-color: rgb(255, 10, 25, 90%);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 650px;
+    right: 450px;
+    font-size: 50px;
+}
+#ravno {
+    background-color: rgb(41, 0, 200, 65%);
+    width: 375px;
+    height: 100px;
+    position: absolute;
+    align-self: center;
+    top: 650px;
+    right: 45px;
+    font-size: 50px;
+}
+
+
+

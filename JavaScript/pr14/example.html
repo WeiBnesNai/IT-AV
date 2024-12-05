@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #button {
+            margin-bottom: 16px;
+        }
+
+        .element {
+            text-decoration: underline;
+            margin-bottom:   8px;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">Добавить элемент</button>
+
+    <div id="elements"></div>
+
+    <script type="text/javascript">
+        // Получаем кнопку "Добавить элемент"
+        let button = document.getElementById('button');
+        // Получаем div со списком элементов
+        let elements = document.getElementById('elements');
+        // Переменная для подсчета добавленных элементов
+        let elementNumber = 0;
+
+        // Функция добавления нового элемента в div
+        function appendElement() {
+            // Создание нового элемента с помощью document.createElement('div'),
+            // где document - html-документ, к которому подключен js-файл,
+            // createElement - команда создания html-элемента
+            // div - название тега, который необходимо добавить на страницу
+            const newDiv = document.createElement('div');
+
+            // Добавить class="element" для созданного элемента
+            // С помощью classList получаем список классов элемента
+            // С помощью метода add добавляем новый класс "element"
+            newDiv.classList.add('element');
+
+            // Подробнее о работе со списком классов: https://learn.javascript.ru/styles-and-classes
+
+            // Увеличиваем количество добавленных элементов на 1 (прибавляем к предыдущему значению единицу)
+            elementNumber = elementNumber + 1;
+
+            // Изменяем созданного ранее html-элемента с помощью innerHTML
+            // То, что мы напишем справа от "innerHTML =" запишется внутрь созданного div-элемента
+            newDiv.innerHTML = `<span>Новый элемент №${ elementNumber }</span>`;
+
+            // Таким образом, мы создали div-элемент следующего вида:
+            // <div class="element">
+            //      <span>Новый элемент №1</span>
+            //</div>
+
+            // Добавляем созданный div-элемент с помощью метода append
+            // append добавляет созданный элемент внутрь элемента elements (в конец данного тега)
+            elements.append(newDiv);
+
+            // Подробнее о добавлении элементов: https://learn.javascript.ru/modifying-document
+        }
+
+        // При нажатии на кнопку button вызываем функцию appendElement
+        button.addEventListener('click', appendElement);
+    </script>
+</body>
+</html>

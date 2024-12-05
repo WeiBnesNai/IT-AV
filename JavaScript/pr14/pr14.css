@@ -1,0 +1,86 @@
+.hea {
+    font-size: 30px;
+    font-style: initial;
+    position: absolute;
+    left: 150px;
+    top: 75px;
+    border: black solid 1px;
+    height: 100px;
+    width: 700px;
+    padding-bottom: 50px;
+
+}
+#z1 {
+    display: flex;
+    justify-content: center;
+
+}
+.cont1 {
+    height: 660px;
+    width: 700px;
+    border: black solid 1px;
+    position: relative;
+    left: 142px;
+    top: 218px;
+}
+.inputN {
+    height: 34px;
+    width: 630px;
+    margin-left: 30px;
+    font-size: 25px;
+    color: rgb(0, 100, 100);
+}
+.n1 {
+    margin-left: 30px;
+}
+#OP {
+    height:70px ;
+}
+#ButtonAdd {
+margin-top: 20px;
+    height: 50px;
+    margin-left: 30px;
+    background-color: rgb(20, 120, 70);
+    color:white ;
+    border: 0;
+    font-size: 18px;
+    width: 180px;
+}
+#ButtonClear {
+    margin-top: 20px;
+    height: 50px;
+    margin-left: 30px;
+    background-color: rgb(90, 90, 90);
+    color:white ;
+    border: 0;
+    font-size: 18px;
+    width: 180px;
+}
+
+.cont2 {
+    height: 660px;
+    width: 600px;
+    display: flex;
+    border: black solid 1px;
+    position: absolute;
+    left:1050px ;
+    top: 226px;
+}
+.hea2 {
+    font-size: 25px;
+    font-style: initial;
+    position: absolute;
+    left: 150px;
+    top: 75px;
+    border: black solid 1px;
+    height: 150px;
+    width: 600px;
+    margin-left: 900px;
+    justify-content: center;
+}
+#z2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+
+}

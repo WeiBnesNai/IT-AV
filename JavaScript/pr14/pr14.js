@@ -7,28 +7,35 @@ let Art = document.getElementById("Art");
 let OP = document.getElementById('OP')
 let button = document.getElementById('button');
 let ButtonClear = document.getElementById('ButtonClear')
-
+let an = document.getElementById('an')
+let tic = document.getElementById('tic')
+let number = 0
 function appendElement() {
     const newDiv = document.createElement("div");
     newDiv.classList.add('element')
     elements.append(newDiv);
     const TxT = document.createElement('h1');
+    TxT.classList.add('text')
     TxT.innerHTML = Name.value
     newDiv.append(TxT)
     TxT.classList.add('title');
     const price = document.createElement('h3');
+    price.classList.add('text')
     price.innerHTML = 'Цена: ' + Price.value;
     newDiv.append(price)
     price.classList.add('price');
     const kolvo = document.createElement('h3');
-    kolvo.innerHTML = 'Количество: ' + Kolvo.value;
+    kolvo.classList.add('text')
+    kolvo.innerHTML = 'Кол-во: ' + Kolvo.value;
     newDiv.append(kolvo)
     kolvo.classList.add('kolvo');
     const art = document.createElement('h3');
+    art.classList.add('text')
     art.innerHTML = 'Артикул: ' + Art.value;
     newDiv.append(art)
     art.classList.add('art');
     const op = document.createElement('h3');
+    op.classList.add('text')
     op.innerHTML = 'Описание: ' + OP.value;
     newDiv.append(op)
     op.classList.add('op');
@@ -36,12 +43,21 @@ function appendElement() {
     newDiv.append(del)
     del.innerHTML = 'Удалить'
     del.classList.add('del')
-    Name.value =''
-    Price.value =''
-    Kolvo.value =''
-    Art.value =''
-    OP.value =''
-
+    Name.value = ''
+    Price.value = ''
+    Kolvo.value = ''
+    Art.value = ''
+    OP.value = ''
+    number = number+1
+    tic.innerHTML = `<span>Добавлено товаров: ${ number }</span>`;
+    const an = document.createElement('button');
+    newDiv.append(an)
+    an.innerHTML = 'Купить:3'
+    an.classList.add('an')
+    function MEMS() {
+        window.location.href = 'https://avatars.mds.yandex.net/i?id=675af6f420e0ec30d66b907088c90dea_l-5878173-images-thumbs&n=13';
+    }
+    an.addEventListener('click', MEMS)
     function delet() {
         TxT.remove();
         price.remove();
@@ -49,9 +65,10 @@ function appendElement() {
         art.remove();
         op.remove();
         newDiv.remove();
+        number = number-1
+        tic.innerHTML = `<span>Добавлено товаров: ${ number }</span>`;
     }
-    del.addEventListener('click', delet)
-}
+    del.addEventListener('click', delet)}
 function deleteA() {
     Name.value =''
     Price.value =''
@@ -59,7 +76,5 @@ function deleteA() {
     Art.value =''
     OP.value =''
 }
-
 ButtonAdd.addEventListener('click', appendElement);
 ButtonClear.addEventListener('click', deleteA)
-

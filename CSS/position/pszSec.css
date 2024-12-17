@@ -1,5 +1,5 @@
 body {
-    position: fixed;
+    position: relative;
     height: 2000px;
     padding-top:80px ;
 }

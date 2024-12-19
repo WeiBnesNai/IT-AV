@@ -10,6 +10,27 @@ let ButtonClear = document.getElementById('ButtonClear')
 let an = document.getElementById('an')
 let tic = document.getElementById('tic')
 let number = 0
+let clearAll = document.getElementById('clearAll')
+let cont2 = document.getElementById('contt2');
+// let TxT = document.getElementsByClassName('TxT')
+// let price = document.getElementsByClassName('price')
+// let kolvo = document.getElementsByClassName('kolvo')
+// let art = document.getElementsByClassName('art')
+// let op = document.getElementsByClassName('op')
+// let newDiv = document.getElementsByClassName('newDiv')
+
+function delAl() {
+    let question = 'Вы точно хотите удалить все товары?'
+    const result = confirm(question)
+    if (result){
+    cont2.innerHTML = ''
+    }
+    else {
+
+    }
+
+}
+clearAll.addEventListener('click', delAl)
 function appendElement() {
     const newDiv = document.createElement("div");
     newDiv.classList.add('element')
@@ -43,6 +64,36 @@ function appendElement() {
     newDiv.append(del)
     del.innerHTML = 'Удалить'
     del.classList.add('del')
+    if (Name.value =='') {
+        let Fall = document.createElement('h3');
+        Fall.innerHTML = 'Ошибка, заполните поле "Название"'
+        cont2.append(Fall)
+        Fall.classList.add('F')
+    }
+    if (Price.value =='') {
+        let Fall = document.createElement('h3');
+        Fall.innerHTML = 'Ошибка, заполните поле "Цена"'
+        cont2.append(Fall)
+        Fall.classList.add('F')
+    }
+    if (Kolvo.value =='') {
+        let Fall = document.createElement('h3');
+        Fall.innerHTML = 'Ошибка, заполните поле "Количество"'
+        cont2.append(Fall)
+        Fall.classList.add('F')
+    }
+    if (Art.value =='') {
+        let Fall = document.createElement('h3');
+        Fall.innerHTML = 'Ошибка, заполните поле "Артикул"'
+        cont2.append(Fall)
+        Fall.classList.add('F')
+    }
+    if (OP.value =='') {
+        let Fall = document.createElement('h3');
+        Fall.innerHTML = 'Ошибка, заполните поле "Описание"'
+        cont2.append(Fall)
+        Fall.classList.add('F')
+    }
     Name.value = ''
     Price.value = ''
     Kolvo.value = ''
@@ -50,6 +101,9 @@ function appendElement() {
     OP.value = ''
     number = number+1
     tic.innerHTML = `<span>Добавлено товаров: ${ number }</span>`;
+
+
+
     const an = document.createElement('button');
     newDiv.append(an)
     an.innerHTML = 'Купить:3'
@@ -59,6 +113,19 @@ function appendElement() {
     }
     an.addEventListener('click', MEMS)
     function delet() {
+        let questionO = ('Вы точно хотите удалить товар: ' + Name.value + '?')  //!
+        const resultO = confirm(questionO)
+        if (resultO){
+            TxT.remove();
+            price.remove();
+            kolvo.remove();
+            art.remove();
+            op.remove();
+            newDiv.remove();
+        }
+        else {
+
+        }
         TxT.remove();
         price.remove();
         kolvo.remove();
@@ -76,5 +143,7 @@ function deleteA() {
     Art.value =''
     OP.value =''
 }
+
+
 ButtonAdd.addEventListener('click', appendElement);
 ButtonClear.addEventListener('click', deleteA)

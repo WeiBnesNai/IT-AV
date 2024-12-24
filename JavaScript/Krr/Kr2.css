@@ -1,0 +1,43 @@
+.buttonsColor {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 10px;
+    height: 70px;
+}
+#c1 {
+    color: white;
+    background-color: black;
+}
+#c2 {
+    color: black;
+    background-color: white;
+}
+#c3 {
+    color: black;
+    background-color: grey;
+}
+#c4 {
+    color: black;
+    background-color: goldenrod;
+}
+#c5 {
+    color: greenyellow;
+    background-color: darkblue;
+}
+
+.buttonsSystem {
+    margin-top: 50px;
+    height: 70px;
+}
+
+#polosa {
+    width: 99%;
+    height: 3px;
+    background: black;
+}
+
+#NumberHistory {
+    border-bottom: solid grey 1px;
+    width: 98%;
+}

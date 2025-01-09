@@ -32,6 +32,9 @@
 }
 .n1 {
     margin-left: 30px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 #OP {
     height:70px ;
@@ -136,4 +139,20 @@ margin-top: 20px;
 .F {
     color: red;
     font-size: 15px;
+    width: 400px;
+    height: 1px;
+    position: relative;
+    left: 200px;
+    bottom: 18px;
+
+
 }
+.ID {
+    color: red;
+    font-size: 15px;
+}
+#allPrice {
+    position: relative;
+    margin-top: 10px;
+}
+

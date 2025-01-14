@@ -3,6 +3,10 @@ let description = document.getElementById('description');
 let button = document.getElementById('button');
 let list = document.getElementById('list');
 let number = document.getElementById('number');
+let searchInput = document.getElementById('search');
+let searchButton = document.getElementById('search-button');
+let resetButton = document.getElementById('reset-button')
+let tasksListHtml = '';
 number = 0
 function addTask() {
 
@@ -37,9 +41,32 @@ function addTask() {
 
     // Добавление нового элемента в конец элемента
     list.append(task);
+
+    tasksListHtml = list.innerHTML;
+
+    // Очищаем поля формы
     title.value =''
     description.value =''
-
 }
 button.addEventListener('click', addTask)
 
+function searchTask() {
+    let tasks = document.getElementsByClassName('task')
+
+    for (let task of tasks) {
+        let titles = task.getElementsByClassName('task-title')
+        let title = titles[0];
+
+        if (title.innerText.includes(searchInput.value) == false) {
+            task.remove()
+        }
+    }
+}
+
+searchButton.addEventListener('click', searchTask)
+
+function resetTasks() {
+    list.innerHTML = tasksListHtml
+}
+
+resetButton.addEventListener('click', resetTasks)

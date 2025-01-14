@@ -155,4 +155,35 @@ margin-top: 20px;
     position: relative;
     margin-top: 10px;
 }
+#search-form {
+    position: absolute;
+    top: 1000px;
+}
+.form {
+    width: 700px;
+    border-top: black solid 1px;
+}
+#search-button {
+    background-color: rgb(20, 120, 70);
+    border: 0;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+#reset-button {
+    background-color: rgb(190, 0, 0);
+    color: white;
+    border: 0;
+    height: 30px;
+    width: 100px;
+    font-size: 18px;
+}
+#search {
+    width: 650px;
+    height: 25px;
+}
+#searchH {
+    font-size: 23px;
+}
 

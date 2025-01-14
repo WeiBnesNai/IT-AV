@@ -17,6 +17,10 @@ let priceID = document.getElementById('priceID')
 let kolvoID = document.getElementById('kolvoID')
 let artID = document.getElementById('artID')
 let opID = document.getElementById('opID')
+let searchInput = document.getElementById('search');
+let searchButton = document.getElementById('search-button');
+let resetButton = document.getElementById('reset-button')
+let tasksListHtml = '';
 let allPriceNumber = 0
 allPrice = document.getElementById('allPrice')
 
@@ -185,3 +189,12 @@ function checkElement1() {
 
     ButtonAdd.addEventListener('click', checkElement1);
     ButtonClear.addEventListener('click', deleteA)
+
+
+function searchTask() {
+    let divs = document.getElementsByClassName('element')
+        for (let task of divs) {
+            let titles = elements.getElementsByClassName('Name')
+            let Name = titles[0];
+        }
+}

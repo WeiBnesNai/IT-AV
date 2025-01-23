@@ -22,3 +22,10 @@
 .user-name {
   text-align: center;
 }
+.input {
+  width: 250px;
+  display: flex;
+}
+.INS {
+
+}

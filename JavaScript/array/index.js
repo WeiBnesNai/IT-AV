@@ -70,36 +70,100 @@ console.log(users)
 let usersList = document.getElementById('users-list');
 // Функция для вывода пользователей на экран
 function showUsers() {
+    // ЦИклы в JavaScript
+    // for (let элемент_массива of массив) {
+    // действия для выполнения над элементом
+    // }
     // Создаём карточку пользователя
-    let userCard = document.createElement('div');
-    // Создаём аватар пользователя
-    let userAvatar = document.createElement('div');
-    // Создаём Имя пользователя
-    let userName = document.createElement('h2')
-    // Создаём номер пользователя
-    let userPhone = document.createElement('p')
-    // Создаём почту пользователя
-    let userEmail = document.createElement('p')
-    // Создаём дату рождения пользователя
-    let userBd = document.createElement('p')
+    for (let user of users) {
+        let userCard = document.createElement('div');
+        // Создаём аватар пользователя
+        let userAvatar = document.createElement('div');
+        // Создаём Имя пользователя
+        let userName = document.createElement('h2')
+        // Создаём номер пользователя
+        let userPhone = document.createElement('p')
+        // Создаём почту пользователя
+        let userEmail = document.createElement('p')
+        // Создаём дату рождения пользователя
+        let userBd = document.createElement('p')
 
-    // Добавляем карточке пользователя класс user-card
-    userCard.classList.add('user-card');
-    // Добавляем аватару пользователя класс user-avatar
-    userAvatar.classList.add('user-avatar');
-    // Добавляем аватару пользователя класс user-name
-    userName.classList.add('user-name');
+        // Добавляем карточке пользователя класс user-card
+        userCard.classList.add('user-card');
+        // Добавляем аватару пользователя класс user-avatar
+        userAvatar.classList.add('user-avatar');
+        // Добавляем аватару пользователя класс user-name
+        userName.classList.add('user-name');
 
-    // Помещаем картинку внутрь div-элемента
-    userAvatar.innerHTML = `<img src="${firstUser.avatar}" alt="" >`
-    // Помещаем Имя внутрь div-элемента-------------------------------------------------------------------!!!
-    userName.innerHTML = firstUser.name;
-    userPhone.innerHTML = `<b>Телефон: </b> ${firstUser.phone} `;
-    userEmail.innerHTML = `<b>Почта: </b> ${firstUser.email} `;
-    userBd.innerHTML = `<b>Дата рождения: </b> ${firstUser.birthday} `;
-    // Поместить карточку пользователя в конце списка
-    usersList.append(userCard);
-    // Поместим аватар, Имя, номер, почту и дату рождения пользователя внутрь созданной карточки
-    userCard.append(userAvatar, userName, userPhone, userEmail, userBd);
+        // Помещаем картинку внутрь div-элемента
+        userAvatar.innerHTML = `<img src="${user.avatar}" alt="" >`
+        // Помещаем Имя внутрь div-элемента-------------------------------------------------------------------!?!
+        userName.innerHTML = user.name;
+        userPhone.innerHTML = `<b>Телефон: </b> ${user.phone} `;
+        userEmail.innerHTML = `<b>Почта: </b> ${user.email} `;
+        userBd.innerHTML = `<b>Дата рождения: </b> ${user.birthday} `;
+        // Поместить карточку пользователя в конце списка
+        usersList.append(userCard);
+        // Поместим аватар, Имя, номер, почту и дату рождения пользователя внутрь созданной карточки
+        userCard.append(userAvatar, userName, userPhone, userEmail, userBd);
+    }
 }
 showUsers()
+
+// let numbers = [1, 2, 3,4, 5, 6]
+// // numbers [0] = numbers [0] -1 ---------------------------|
+// // console.log(numbers) -----------------------------------NO
+// for (let num of numbers) { --------------------------------|
+//     // console.log('Элемент массива', num) ----------------YES
+//     num = num+1
+// }
+let avatarIN = document.getElementById('avatarIN')
+let nameIN = document.getElementById('nameIN')
+let phoneIN = document.getElementById('phoneIN')
+let emailIN = document.getElementById('emailIN')
+let bdIN = document.getElementById('bdIN')
+let add = document.getElementById('ADDUS')
+let delUs = document.getElementById('delUs')
+
+let AddUsers = []
+
+add.addEventListener('click', addUs)
+
+function addUs() {
+    AddUsers.push({
+        Aavatar: avatarIN.value,
+        Nname: nameIN.value,
+        Pphone: phoneIN.value,
+        Eemail: emailIN.value,
+        Bbd: bdIN.value
+    })
+    usersList.innerHTML = ''
+    for (let user of AddUsers) {
+        let usCard = document.createElement('div');
+        let usAvatar = document.createElement('div');
+        let usName = document.createElement('h2');
+        let usPhone = document.createElement('p');
+        let usEmail = document.createElement('p');
+        let usBD = document.createElement('p');
+
+        usCard.classList.add('user-card');
+        usAvatar.classList.add('user-avatar');
+        usName.classList.add('user-name');
+
+        usAvatar.innerHTML = `<img src="${user.Aavatar}" alt="" >`
+        usName.innerHTML = user.Nname;
+        usPhone.innerHTML = `<b>Телефон: </b> ${user.Pphone} `;
+        usEmail.innerHTML = `<b>Почта: </b> ${user.Eemail} `;
+        usBD.innerHTML = `<b>Дата рождения: </b> ${user.Bbd} `;
+        usersList.append(usCard);
+        usCard.append(usAvatar, usName, usPhone, usEmail, usBD);
+
+
+
+    }
+}
+delUs.addEventListener('click', del)
+function del() {
+
+
+}

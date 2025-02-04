@@ -33,7 +33,7 @@ function showTasks() {
                     //Удаление задачи из сервиса dummyjson.com
                     let response = await axios.delete(`https://dummyjson.com/posts/${new_task.id}`)
                     let task = response.data
-                    // УЕсли задача была успешно удалена сервисом
+                    // Если задача была успешно удалена сервисом
                     if (task.isDeleted) {
                         new_tasks.splice(index, 1)
                         showTasks()

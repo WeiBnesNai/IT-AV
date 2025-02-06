@@ -1,7 +1,20 @@
 let movies = document.getElementById("movies");
 let new_movie =[]
+let page1b = document.getElementById("page1");
+let page2b = document.getElementById("page2");
+let page3b = document.getElementById("page3");
+let page4b = document.getElementById("page4");
+let page5b = document.getElementById("page5");
+let Naiti = document.getElementsByClassName('inputNai')
+let PB = document.getElementsByClassName('pb')
+
+let page = 1
 async function getMovies() {
    let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?type=TV_SERIES', {
+       params: {
+           keyword: '',
+           page: page,
+       },
        headers: {
            'X-API-KEY': 'f85183cb-777b-4fe8-a1c7-e368548fac6f',
        }
@@ -41,7 +54,78 @@ function showMovie() {
         movie__average.classList.add('movie__average')
         mobie.classList.add('movie')
 
+
+
+
     }
+}
+function page1 () {
+       page1b.classList.add('pageButton_active')
+    page2b.classList.remove('pageButton_active')
+    page3b.classList.remove('pageButton_active')
+    page4b.classList.remove('pageButton_active')
+    page5b.classList.remove('pageButton_active')
+    movies.innerHTML = ''
+    page = 1
+    getMovies()
+}
+page1b.addEventListener('click', page1)
+
+function page2 () {
+    page1b.classList.remove('pageButton_active')
+    page2b.classList.add('pageButton_active')
+    page3b.classList.remove('pageButton_active')
+    page4b.classList.remove('pageButton_active')
+    page5b.classList.remove('pageButton_active')
+    movies.innerHTML = ''
+    page = 2
+    getMovies()
 
 }
+page2b.addEventListener('click', page2)
+
+function page3 () {
+    page1b.classList.remove('pageButton_active')
+    page2b.classList.remove('pageButton_active')
+    page3b.classList.add('pageButton_active')
+    page4b.classList.remove('pageButton_active')
+    page5b.classList.remove('pageButton_active')
+    movies.innerHTML = ''
+    page = 3
+    getMovies()
+}
+page3b.addEventListener('click', page3)
+
+function page4 () {
+    page1b.classList.remove('pageButton_active')
+    page2b.classList.remove('pageButton_active')
+    page3b.classList.remove('pageButton_active')
+    page4b.classList.add('pageButton_active')
+    page5b.classList.remove('pageButton_active')
+    page5b.classList.remove('pageButton_active')
+    movies.innerHTML = ''
+    page = 4
+    getMovies()
+}
+page4b.addEventListener('click', page4)
+
+function page5 () {
+    page1b.classList.remove('pageButton_active')
+    page2b.classList.remove('pageButton_active')
+    page3b.classList.remove('pageButton_active')
+    page4b.classList.remove('pageButton_active')
+    page5b.classList.add('pageButton_active')
+    movies.innerHTML = ''
+    page = 5
+    getMovies()
+}
+page5b.addEventListener('click', page5)
+
+function searchB () {
+    keyword = Naiti.value
+    console.log(keyword)
+}
+PB.addEventListener('click', searchB)
+
+
 

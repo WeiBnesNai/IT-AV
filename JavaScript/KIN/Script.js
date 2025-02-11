@@ -5,20 +5,21 @@ let page2b = document.getElementById("page2");
 let page3b = document.getElementById("page3");
 let page4b = document.getElementById("page4");
 let page5b = document.getElementById("page5");
-let Naiti = document.getElementsByClassName('inputNai')
-let PB = document.getElementsByClassName('pb')
+let Naiti = document.getElementById('inputNai')
+let SearchButton = document.getElementById('SearchButton')
+let clearSeach = document.getElementById("clearSearch");
 
 let page = 1
 async function getMovies() {
-   let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?type=TV_SERIES', {
-       params: {
-           keyword: '',
-           page: page,
-       },
-       headers: {
-           'X-API-KEY': 'f85183cb-777b-4fe8-a1c7-e368548fac6f',
-       }
-   })
+    let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?type=TV_SERIES', {
+        params: {
+            keyword: Naiti.value,
+            page: page,
+        },
+        headers: {
+            'X-API-KEY': 'f85183cb-777b-4fe8-a1c7-e368548fac6f',
+        }
+    })
     new_movie = response.data.items
     console.log(new_movie)
     showMovie()
@@ -26,6 +27,8 @@ async function getMovies() {
 getMovies()
 
 function showMovie() {
+    movies.innerHTML = ''
+
     for (let movie of new_movie) {
         let mobie = document.createElement("div")
         let movie__cover_inner = document.createElement("div")
@@ -60,7 +63,7 @@ function showMovie() {
     }
 }
 function page1 () {
-       page1b.classList.add('pageButton_active')
+    page1b.classList.add('pageButton_active')
     page2b.classList.remove('pageButton_active')
     page3b.classList.remove('pageButton_active')
     page4b.classList.remove('pageButton_active')
@@ -121,11 +124,12 @@ function page5 () {
 }
 page5b.addEventListener('click', page5)
 
-function searchB () {
-    keyword = Naiti.value
-    console.log(keyword)
+function clearSearch() {
+    movies.innerHTML = ''
+    Naiti.value = ''
+    getMovies()
 }
-PB.addEventListener('click', searchB)
 
 
-
+SearchButton.addEventListener('click', getMovies)
+clearSeach.addEventListener('click', clearSearch)

@@ -1,5 +1,5 @@
 let movies = document.getElementById("movies");
-let new_movie =[]
+let new_movie = []
 let page1b = document.getElementById("page1");
 let page2b = document.getElementById("page2");
 let page3b = document.getElementById("page3");
@@ -10,6 +10,7 @@ let SearchButton = document.getElementById('SearchButton')
 let clearSeach = document.getElementById("clearSearch");
 
 let page = 1
+
 async function getMovies() {
     let response = await axios.get('https://kinopoiskapiunofficial.tech/api/v2.2/films?type=TV_SERIES', {
         params: {
@@ -24,11 +25,12 @@ async function getMovies() {
     console.log(new_movie)
     showMovie()
 }
+
 getMovies()
+page1b.classList.add("pageButton_active")
 
 function showMovie() {
     movies.innerHTML = ''
-
     for (let movie of new_movie) {
         let mobie = document.createElement("div")
         let movie__cover_inner = document.createElement("div")
@@ -56,13 +58,20 @@ function showMovie() {
         movie__title.classList.add('movie__title')
         movie__average.classList.add('movie__average')
         mobie.classList.add('movie')
+        // mobie.addEventListener('click', per)
 
+        function per() {
+            let url = `str.html?id=${movie.kinopoiskId}`;
+            window.open(url, '_self');
 
+            // window.open('str.html?id='+5260016, '_blank')
 
-
+        }
+        mobie.addEventListener('click', per)
     }
 }
-function page1 () {
+
+function page1() {
     page1b.classList.add('pageButton_active')
     page2b.classList.remove('pageButton_active')
     page3b.classList.remove('pageButton_active')
@@ -72,9 +81,10 @@ function page1 () {
     page = 1
     getMovies()
 }
+
 page1b.addEventListener('click', page1)
 
-function page2 () {
+function page2() {
     page1b.classList.remove('pageButton_active')
     page2b.classList.add('pageButton_active')
     page3b.classList.remove('pageButton_active')
@@ -85,9 +95,10 @@ function page2 () {
     getMovies()
 
 }
+
 page2b.addEventListener('click', page2)
 
-function page3 () {
+function page3() {
     page1b.classList.remove('pageButton_active')
     page2b.classList.remove('pageButton_active')
     page3b.classList.add('pageButton_active')
@@ -97,9 +108,10 @@ function page3 () {
     page = 3
     getMovies()
 }
+
 page3b.addEventListener('click', page3)
 
-function page4 () {
+function page4() {
     page1b.classList.remove('pageButton_active')
     page2b.classList.remove('pageButton_active')
     page3b.classList.remove('pageButton_active')
@@ -110,9 +122,10 @@ function page4 () {
     page = 4
     getMovies()
 }
+
 page4b.addEventListener('click', page4)
 
-function page5 () {
+function page5() {
     page1b.classList.remove('pageButton_active')
     page2b.classList.remove('pageButton_active')
     page3b.classList.remove('pageButton_active')
@@ -122,6 +135,7 @@ function page5 () {
     page = 5
     getMovies()
 }
+
 page5b.addEventListener('click', page5)
 
 function clearSearch() {

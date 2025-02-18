@@ -65,7 +65,6 @@ function showMovie() {
             window.open(url, '_self');
 
             // window.open('str.html?id='+5260016, '_blank')
-
         }
         mobie.addEventListener('click', per)
     }

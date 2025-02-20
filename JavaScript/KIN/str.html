@@ -16,8 +16,8 @@
 </header>
 <div class="container">
     <div class="movie">
-        <div id='cover' class="movie__cover">
-            <img
+        <div  class="movie__cover">
+            <img id='cover'
                     src="https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/fb35416f-3b0d-4b96-bc65-cf6923f9e329/360"
                     alt="Обложка фильма"
             >
@@ -51,7 +51,6 @@
                     </div>
 
                     <div id="country" class="movie__value">
-                        США
                     </div>
                 </div>
 
@@ -61,7 +60,6 @@
                     </div>
 
                     <div id="g" class="movie__value">
-                        триллер, драма, криминал
                     </div>
                 </div>
 
@@ -96,7 +94,7 @@
                 </div>
             </div>
 
-            <a
+            <a id="pButton"
                     href="https://www.kinopoisk.ru/series/404900/"
                     class="movie__button"
             >
@@ -104,6 +102,42 @@
             </a>
         </div>
     </div>
+</div>
+
+<div class="comment-form">
+    <h2 class="comment-form__title">Оставьте комментарий</h2>
+    <div class="comment-form__item">
+        <label for="author" class="comment-form__label">Ваше имя</label>
+        <input type="text" id="author" class="comment-form__author" required>
+    </div>
+    <div class="comment-form__item">
+        <label for="text" class="comment-form__label">Ваш комментарий</label>
+        <textarea id="text" class="comment-form__text" rows="5" required></textarea>
+    </div>
+    <button id="sub" type="submit" class="comment-form__button movie__button">Отправить</button>
+</div>
+
+<div class="comments-list">
+    <h2 class="comments-list__title">Комментарии</h2>
+    <div id="comlist" class="comments-list__items">
+        <div class="comments-list__item">
+            <div class="comments-list__text">
+                Во все тяжкие - это однозначно один из лучших сериалов созданных людьми. В нем нет минусов, зато есть огромное количество плюсов и думаю не существует человека, которому не понравится этот проект!
+            </div>
+            <div class="comments-list__author">
+                Елисей
+            </div>
+        </div>
+        <div class="comments-list__item">
+            <div class="comments-list__text">
+                Очень интересный и захватывающий сериал, который остается таким же душещипательным и проницательным, с первой - до самой последней секунды сериала.
+            </div>
+            <div class="comments-list__author">
+                Михаил
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

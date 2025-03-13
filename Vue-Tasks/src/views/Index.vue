@@ -9,7 +9,7 @@ let cities = ref([])
 
 
 function addname(){
-  if (name ===   null ) {
+  if (name.value === '' ) {
     alert('Введите имя')
   }
   else {
@@ -17,7 +17,12 @@ function addname(){
   }}
 
 function addcity(){
-  cities.value.push(city.value)
+  if(city.value ==='') {
+    alert('Введите город')
+  }
+  else {
+    cities.value.push(city.value)
+  }
 }
 </script>
 
@@ -39,7 +44,7 @@ function addcity(){
     <div class="names">
       <h2>Место для добавления</h2>
       <ul>
-        <li
+        <li class="nameS"
           v-for="n in names"
         >
           {{ n }}
@@ -60,7 +65,7 @@ function addcity(){
   <div class="city">
     <h2>Место для добавления</h2>
     <ul>
-      <li
+      <li class="cityS"
           v-for="n in cities"
       >
         {{ n }}
@@ -74,6 +79,15 @@ function addcity(){
 <style scoped>
 .container {
   display: flex;
+}
+
+.nameS{
+  font-style: italic;
+  color: green;
+}
+.cityS{
+  font-style: italic;
+  font-weight: bold;
 }
 
 .namee {

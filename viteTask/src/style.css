@@ -146,6 +146,6 @@ task items
   font-size: 14px;
 }
 
-.taskItems .toggle.toggle-completed {
+.taskItems .toggle.toggle-completed :not(.delete-button){
   text-decoration:line-through;
 }

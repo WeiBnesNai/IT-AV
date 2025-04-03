@@ -16,6 +16,7 @@
         <button
         @click = 'addTask'
         >+</button>
+
       </div>
       <!-- task lists -->
       <div class="taskItems">
@@ -24,6 +25,7 @@
           'toggle i': Task.completed === true,
           'toggle-completed': Task.completed === true
 }"
+
           >
             <button
             @click = 'taskTrue(Task)'
@@ -48,18 +50,23 @@
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
-        <span>Ожидают выполнения:</span>
+        <span>Ожидают выполнения: {{numZ}}
+
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import {onActivated, ref} from "vue";
+import {onActivated, ref, computed} from "vue";
 console.log('H')
 
 let Task = ref()
 let Tasks = ref([])
+
+let numZ = computed(Iv)
+
 
 function addTask() {
   console.log('H')
@@ -67,7 +74,6 @@ function addTask() {
     name: Task.value,
     completed: false,
   })
-
 }
 
 function delTask(index) {
@@ -93,10 +99,31 @@ function delAllTasks(){
 }
 
 function taskTrue(task) {
+
   task.completed = !task.completed
+
 }
-function delete_ConfirmTasks() {
-  Tasks.value.splice( 0)
-}
+ function delete_ConfirmTasks(task, index) {
+
+   for (let i = 0; i < task.completed; i = i+1 ){
+
+     if (task.completed === true){
+       Tasks.value.splice(index,1)
+     }
+   }
+ }
+
+ function Iv () {
+   let numTC = 0
+
+  for (let i = 0; i < Tasks.value.length; i = i+1 ) {
+    let zadacha = Tasks.value[i]
+
+    if (zadacha.completed === false) {
+      numTC = numTC + 1
+    }
+  }
+   return numTC
+ }
 
 </script>
